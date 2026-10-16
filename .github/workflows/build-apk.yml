@@ -10,23 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Source Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '17'
           distribution: 'temurin'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: '8.4'
+        uses: gradle/actions/setup-gradle@v4
 
-      - name: Build Debug & Release Signed APK
-        run: gradle assembleDebug assembleRelease --stacktrace
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-      - name: Upload Signed APK Artifact
+      - name: Build Debug & Release APK
+        run: ./gradlew assembleDebug assembleRelease --stacktrace
+
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: FastLink-Accounts-v01.07-APK
