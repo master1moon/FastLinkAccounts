@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FastLinkAccounts" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#64B5F6</item>
+        <item name="colorSecondary">#4DB6AC</item>
+        <item name="android:statusBarColor">#0A1929</item>
+        <item name="android:fontFamily">@font/cairo</item>
+        <item name="fontFamily">@font/cairo</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="android:textDirection">rtl</item>
+    </style>
+</resources>

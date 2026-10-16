@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. تحديد الفترة الزمنية أو الدورة:"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgStatementPeriod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/rbPeriodCurrentCycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="مشاركة الدورة المعروضة حالياً (الافتراضي)" />
+            <RadioButton
+                android:id="@+id/rbPeriodToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="دورة جاهزة: اليوم" />
+            <RadioButton
+                android:id="@+id/rbPeriodThisMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="دورة جاهزة: هذا الشهر" />
+            <RadioButton
+                android:id="@+id/rbPeriodLastMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="دورة جاهزة: الشهر الماضي" />
+            <RadioButton
+                android:id="@+id/rbPeriodCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="اختيار مدة مخصصة (من - إلى)" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnPickCustomRange"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="تحديد تاريخ البداية والنهاية" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2. تصفية المحتوى والتحكم بالطول:"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cbIncludeSales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="تضمين تفاصيل كل عملية بيع" />
+
+        <CheckBox
+            android:id="@+id/cbIncludePayments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="تضمين تفاصيل كل تسديد" />
+
+        <CheckBox
+            android:id="@+id/cbSummaryOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تضمين الملخص فقط" />
+
+        <RadioGroup
+            android:id="@+id/rgStatementLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbLengthBrief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مختصر" />
+            <RadioButton
+                android:id="@+id/rbLengthMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوسط" />
+            <RadioButton
+                android:id="@+id/rbLengthFull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="كامل" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="معاينة وتعديل النص قبل الإرسال:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etStatementPreview"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:gravity="top|right"
+            android:inputType="textMultiLine"
+            android:background="#F5F7FA"
+            android:padding="8dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="3. اختر طريقة المشاركة:"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnShareWhatsApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/whatsapp_green"
+            android:text="🟢 مشاركة الدورة عبر واتساب (WhatsApp)" />
+
+        <Button
+            android:id="@+id/btnShareSmsFull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/warning_orange"
+            android:text="💬 مشاركة الكشف الكامل عبر SMS" />
+
+        <Button
+            android:id="@+id/btnShareOtherText"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📤 مشاركة عبر تطبيق آخر (نص)" />
+
+        <Button
+            android:id="@+id/btnSharePdfFile"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📄 مشاركة كملف PDF (A4)" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ملخص الإجمالي العام للمحل في أعلى الشاشة -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:id="@+id/tvDetailHeaderStoreName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvDetailOverallTotals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#E3F2FD"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/tvDetailCurrentDebt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#FFCDD2"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- أ) قسم البيانات الأساسية للمحل + أيقونات الاتصال والرسائل وواتساب والمشاركة والخرائط -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tvStoreBasicInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp" />
+
+                <!-- شريط أيقونات الهاتف (اتصال، SMS، واتساب، مشاركة vCard، خرائط الموقع) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp">
+
+                    <ImageButton
+                        android:id="@+id/btnIconCall"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:src="@drawable/ic_call"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="اتصال"
+                        app:tint="@color/primary" />
+
+                    <ImageButton
+                        android:id="@+id/btnIconSms"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_sms"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="رسالة SMS"
+                        app:tint="@color/warning_orange" />
+
+                    <ImageButton
+                        android:id="@+id/btnIconWhatsApp"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_whatsapp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="واتساب"
+                        app:tint="@color/whatsapp_green" />
+
+                    <ImageButton
+                        android:id="@+id/btnIconShareContact"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_share"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="مشاركة جهة اتصال"
+                        app:tint="@color/secondary" />
+
+                    <ImageButton
+                        android:id="@+id/btnIconOpenMaps"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_map"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="فتح الموقع في الخرائط"
+                        app:tint="@color/danger_red" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- د) قسم إجراءات سريعة -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
+            <Button
+                android:id="@+id/btnStoreSellCards"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:text="🛒 بيع للمحل" />
+            <Button
+                android:id="@+id/btnStoreRecordPayment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:backgroundTint="@color/success_green"
+                android:text="💵 تسجيل دفعة" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/btnStoreShareStatement"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:text="📤 مشاركة كشف الحساب" />
+            <Button
+                android:id="@+id/btnStoreSavePdfA4"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:text="📄 حفظ كشف PDF (A4)" />
+        </LinearLayout>
+
+        <!-- ب) قسم الدورة المالية (Financial Cycle) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="الدورة المالية (عرض الحساب حسب الدورة)"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgCycleType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+            <RadioButton
+                android:id="@+id/rbCycleDaily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="اليوم" />
+            <RadioButton
+                android:id="@+id/rbCycleWeekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="الأسبوع" />
+            <RadioButton
+                android:id="@+id/rbCycleMonthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الشهر" />
+            <RadioButton
+                android:id="@+id/rbCycleCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مخصص" />
+        </RadioGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFinancialCycles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="4dp" />
+
+        <!-- ج) قسم سجل العمليات الزمني (Transaction History Timeline) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="سجل العمليات الزمني (Timeline)"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <Button
+                android:id="@+id/btnFilterTxAll"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="الكل" />
+            <Button
+                android:id="@+id/btnFilterTxSales"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="المبيعات فقط" />
+            <Button
+                android:id="@+id/btnFilterTxPayments"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="التسديدات فقط" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStoreTimeline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

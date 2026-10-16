@@ -1,0 +1,5 @@
+-keep class com.fastlink.accounts.data.** { *; }
+-keep class org.apache.poi.** { *; }
+-dontwarn org.apache.poi.**
+-dontwarn javax.xml.**
+-dontwarn org.openxmlformats.**

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#000000</color>
+    <color name="primary">#0D47A1</color>
+    <color name="primary_variant">#1565C0</color>
+    <color name="secondary">#00897B</color>
+    <color name="secondary_variant">#00695C</color>
+    <color name="background_light">#F4F6F9</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="text_primary">#1C2833</color>
+    <color name="text_secondary">#566573</color>
+    <color name="success_green">#2E7D32</color>
+    <color name="warning_orange">#EF6C00</color>
+    <color name="danger_red">#C62828</color>
+    <color name="debt_row_highlight">#FFEBEE</color>
+    <color name="whatsapp_green">#25D366</color>
+    <color name="divider_color">#E0E6ED</color>
+</resources>

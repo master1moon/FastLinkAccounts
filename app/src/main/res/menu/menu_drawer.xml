@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/nav_dashboard" />
+        <item
+            android:id="@+id/nav_packages"
+            android:icon="@drawable/ic_packages"
+            android:title="@string/nav_packages" />
+        <item
+            android:id="@+id/nav_inventory"
+            android:icon="@drawable/ic_inventory"
+            android:title="@string/nav_inventory" />
+        <item
+            android:id="@+id/nav_stores"
+            android:icon="@drawable/ic_stores"
+            android:title="@string/nav_stores" />
+        <item
+            android:id="@+id/nav_expenses"
+            android:icon="@drawable/ic_expenses"
+            android:title="@string/nav_expenses" />
+        <item
+            android:id="@+id/nav_reports"
+            android:icon="@drawable/ic_reports"
+            android:title="@string/nav_reports" />
+        <item
+            android:id="@+id/nav_partners"
+            android:icon="@drawable/ic_partners"
+            android:title="@string/nav_partners" />
+        <item
+            android:id="@+id/nav_backup"
+            android:icon="@drawable/ic_backup"
+            android:title="@string/nav_backup" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/nav_settings" />
+    </group>
+</menu>
